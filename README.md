@@ -1,1 +1,1 @@
-Group project on creating your own shell
+Group project on creating your own shell interpreter
