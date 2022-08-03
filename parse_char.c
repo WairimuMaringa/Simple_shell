@@ -1,3 +1,5 @@
+#include "headershell.h"
+
 /**
  * remove_equal_sign - gets rid of characters including the equal sign in string
  * @string: a string parameter

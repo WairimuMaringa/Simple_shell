@@ -1,3 +1,5 @@
+#include "headershell.h"
+
 /**
  * search_path - searches for a path variable in the PATH
  * @string: name to look for

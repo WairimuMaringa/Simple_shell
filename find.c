@@ -1,3 +1,5 @@
+#include "headershell.h"
+
 /**
  * find - searches for commands
  * @args: strings to search for

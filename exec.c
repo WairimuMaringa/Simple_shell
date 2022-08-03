@@ -1,3 +1,5 @@
+#include "headershell.h"
+
 /**
  * exec - forks a child process and executes a new program in it
  * @args: double pointer to strings containing arguments

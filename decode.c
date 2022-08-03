@@ -1,3 +1,6 @@
+#include "headershell.h"
+
+
 /**
  * decoder - checks to see which function an argument should be sent to
  * @args: string of arguments

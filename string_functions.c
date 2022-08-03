@@ -1,12 +1,11 @@
+#include "headershell.h"
+
 /**
  * _strdup - duplicates a string;
  * @s: string to be duplicated
  *
  * Return: The pointer to the copied string
  */
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
 char *_strdup(char *s)
 {
 	int len, count;
