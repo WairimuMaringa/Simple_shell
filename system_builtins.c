@@ -13,8 +13,27 @@ void sig_transmission(int signal_no)
 		write(STOUT_FILENO, "\n# ", 3);
 	}
 }
+
 /**
- * exit_she;; - specifies how we exit the shell
+ * print_environmt - prints the environment
+ * Return: 0
+ */
+
+int print_environmt(void)
+{
+	int x;
+
+	for (x = 0; environ[x] != NULL; x++)
+	{
+		write(STDOUT_FILENO, environ[x], _strlen(environ[x]));
+		write(STDOUT_FILENO, "\n", 1);
+	}
+	return (0);
+}
+
+
+/**
+ * exit_shell - specifies how we exit the shell
  * @args: string array of args
  * @string: a space set aside
  *
