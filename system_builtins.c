@@ -40,8 +40,3 @@ int exit_shell(char **args, char *string)
 		exit(digit);
 	}
 }
-int decoder(char **args)
-{
-	struct stat st;
-	
-}

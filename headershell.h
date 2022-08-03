@@ -41,4 +41,15 @@ void remove_equal_sign(char **string);
 int countchars(char *string);
 char **tokenize(char *string, int num);
 char *search_path(char *string);
-char *
+char *_strdup(char *s);
+char _strcmp(char *string1, char *string2);
+int _strlen(char *string);
+int _atoi(char *string);
+char *_strconcat(char *string1, char *string2);
+void sig_transmission(int signal_no);
+int exit_shell(char **args, char *string);
+int
+
+
+
+#endif

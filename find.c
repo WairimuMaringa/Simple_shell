@@ -99,7 +99,7 @@ int find_dirs(char **instruction, char **args)
 		chdir(instruction[count]);
 		if (stat(args[0], &st) == 0)
 		{
-			args[0] = _strcat(instruction[count], args[0]);
+			args[0] = _strconcat(instruction[count], args[0]);
 			if (args[0] == NULL)
 			{
 				free_space(1, working_d);

@@ -105,13 +105,13 @@ int _atoi(char *string)
 	return (x);
 }
 /**
- * _strcat - joining 2 strings
+ * _strconcat - joining 2 strings
  * @string1: First string
  * @string2: second string
  *
  * Return: A new joined string
  */
-char *_strcat(char *string1, char *string2)
+char *_strconcat(char *string1, char *string2)
 {
 	int count, x, y;
 
