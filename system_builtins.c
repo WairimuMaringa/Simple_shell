@@ -1,19 +1,5 @@
-/**
- * print_environment - prints the environment
- *
- * Return: 0
- */
-int print_environment(void)
-{
-	int count;
+#include "headershell.h"
 
-	for (count = 0; environ[count] != NULL; count++)
-	{
-		write(STDOUT_FILENO, environ[count], _strlen(environ[count]));
-		write(STDOUT_FILENO, "\n", 1);
-	}
-	return (0);
-}	
 /**
  * sig_transmission - it confirms if the signal is SIGINT
  * @signal_no: the number of the signal
@@ -28,7 +14,7 @@ void sig_transmission(int signal_no)
 	}
 }
 /**
- * exit_shell - specifies how we exit the shell
+ * exit_she;; - specifies how we exit the shell
  * @args: string array of args
  * @string: a space set aside
  *
@@ -53,4 +39,9 @@ int exit_shell(char **args, char *string)
 		free_space(2, args);
 		exit(digit);
 	}
+}
+int decoder(char **args)
+{
+	struct stat st;
+	
 }
