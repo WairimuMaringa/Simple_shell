@@ -31,7 +31,7 @@ char *_strdup(char *s)
 	return (target);
 }
 /**
- * )strcmp - compares 2 strings
+ * _strcmp - compares 2 strings
  * @string1: First string
  * @string2: Second string
  *
@@ -116,7 +116,7 @@ char *_strcat(char *string1, char *string2)
 {
 	int count, x, y;
 
-	char "new_str;
+	char new_str;
 
 	y = 0;
 	count = _strlen(string1) + _strlen(string2) + 2;
