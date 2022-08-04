@@ -16,10 +16,10 @@ char *search_path(char *string)
 		{
 			break;
 		}
-		else if (environ[x + 1] == NULL)
+		else if (environ[count + 1] == NULL)
 		{
 			perror("find path");
 		}
 	}
-	return (environ[x]);
+	return (environ[count]);
 }

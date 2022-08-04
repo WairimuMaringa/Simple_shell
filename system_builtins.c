@@ -10,7 +10,7 @@ void sig_transmission(int signal_no)
 {
 	if (signal_no == SIGINT)
 	{
-		write(STOUT_FILENO, "\n# ", 3);
+		write(STDOUT_FILENO, "\n# ", 3);
 	}
 }
 

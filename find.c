@@ -49,7 +49,7 @@ int find(char **args)
 int find_builtins(char **args)
 {
 	builtin builtins[] = {
-		{"env", print_environment},
+		{"env", print_environmt},
 		{NULL, NULL}
 	};
 

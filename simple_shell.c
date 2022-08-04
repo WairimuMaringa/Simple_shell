@@ -5,7 +5,7 @@
  * @argv: string array of args
  * Return: 0 or multiple errors
  */
-int main(__attribute__unused((unused)) int argc, char *argv[])
+int main(__attribute__((unused)) int argc, char *argv[])
 {
 	int infinite_loop, num_chars;
 
@@ -26,7 +26,7 @@ int main(__attribute__unused((unused)) int argc, char *argv[])
 		if (getline(&read_line, &x, stdin) == EOF)
 		{
 			if (isatty(STDIN_FILENO))
-				write(STOUT_FILENO, "\n", 1);
+				write(STDOUT_FILENO, "\n", 1);
 			exit(EXIT_FAILURE);
 		}
 		num_chars = countchars(read_line);
@@ -34,12 +34,12 @@ int main(__attribute__unused((unused)) int argc, char *argv[])
 		if (_strcmp(arguments[0], "exit") == 0 &&
 				(_strlen(arguments[0]) == _strlen("exit")))
 		{
-			if (exit_shell(arguments, readline) == -1)
+			if (exit_shell(arguments, read_line) == -1)
 				error_message(argv, arguments, infinite_loop);
 		}
 		else if (arguments != NULL && arguments[0] != NULL)
 		{
-			if (decoder(args) == -1)
+			if (decoder(arguments) == -1)
 				error_message(argv, arguments, num_chars);
 		}
 		free_space(1, read_line);

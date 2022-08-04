@@ -11,12 +11,12 @@ void remove_equal_sign(char **string)
 	int count;
 
 	count = 0;
-	while (string[0][x] != '=')
+	while (string[0][count] != '=')
 	{
-		string[0][x] = ':';
-		x++;
+		string[0][count] = ':';
+		count++;
 	}
-	string[0][x] = ':';
+	string[0][count] = ':';
 }
 /**
  * countchars - counts number of chars in a string from getline

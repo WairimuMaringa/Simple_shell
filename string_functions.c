@@ -115,7 +115,7 @@ char *_strconcat(char *string1, char *string2)
 {
 	int count, x, y;
 
-	char new_str;
+	char *new_str;
 
 	y = 0;
 	count = _strlen(string1) + _strlen(string2) + 2;
@@ -129,7 +129,7 @@ char *_strconcat(char *string1, char *string2)
 		new_str[y] = string1[x];
 		y++;
 	}
-	if (j != 0)
+	if (y != 0)
 	{
 		new_str[y] = '/';
 		y++;
@@ -140,6 +140,6 @@ char *_strconcat(char *string1, char *string2)
 		y++;
 	}
 	new_str[y] = '\0';
-	free_space(string2);
+	free_space(1, string2);
 	return (new_str);
 }

@@ -9,14 +9,18 @@
  */
 int decoder(char **args)
 {
-	struct stat st;
+	struct stat sb;
 
 	if (find_builtins(args) == 0)
 	{
 		return (0);
 	}
 	find(args);
-	if (stat(args[0], &st) == 0 && S_ISREG(&st.st_mode) == 0)
+	if (stat(args[0], &sb) == -1)
+	{
+		return (-1);
+	}
+	if (stat(args[0], &sb) == 0 && S_ISREG(sb.st_mode) == 0)
 	{
 		return (-1);
 	}
@@ -43,7 +47,7 @@ void free_space(int x, ...)
 	int count;
 
 	va_start(list, x);
-	if (n == 1)
+	if (x == 1)
 	{
 		single_pointer = va_arg(list, char *);
 		if (single_pointer == NULL)
@@ -52,7 +56,7 @@ void free_space(int x, ...)
 		}
 		free(single_pointer);
 	}
-	if (n == 2)
+	if (x == 2)
 	{
 		double_pointer = va_arg(list, char **);
 		if (double_pointer == NULL)
@@ -83,7 +87,7 @@ void error_message(char **argv, char **args, int x)
 	write(STDERR_FILENO, delim, _strlen(delim));
 	error_number(x);
 	write(STDERR_FILENO, delim, _strlen(delim));
-	write(STDERR_FILENO, argv[0], _strlen(argv[0]));
+	write(STDERR_FILENO, args[0], _strlen(argv[0]));
 	write(STDERR_FILENO, delim, _strlen(delim));
 	write(STDERR_FILENO, error, _strlen(error));
 	write(STDERR_FILENO, "\n", 1);
@@ -111,7 +115,7 @@ void error_number(int x)
 	while (num >= 1)
 	{
 		c = ((j / num) % 10) + '0';
-		write(STD_ERR, &c, 1);
+		write(STDERR_FILENO, &c, 1);
 		num /= 10;
 	}
 }
