@@ -1,7 +1,7 @@
 #include "headershell.h"
 
 /**
- * remove_equal_sign - gets rid of characters including the equal sign in string
+ * remove_equal_sign - removes chars including the equal sign
  * @string: a string parameter
  *
  * Return: void
@@ -11,7 +11,7 @@ void remove_equal_sign(char **string)
 	int count;
 
 	count = 0;
-	while(string[0][x] != '=')
+	while (string[0][x] != '=')
 	{
 		string[0][x] = ':';
 		x++;
@@ -27,8 +27,8 @@ void remove_equal_sign(char **string)
 int countchars(char *string)
 {
 	int x, y, num, flag;
-	
 	char *delim = " :";
+
 	x = 0;
 	flag = 0;
 	num = 1;
@@ -69,7 +69,6 @@ char **tokenize(char *string, int num)
 	char *token;
 
 	char **token_char = malloc(sizeof(char *) * num);
-	
 	char *delim = " :'\n''\t'";
 
 	x = 0;

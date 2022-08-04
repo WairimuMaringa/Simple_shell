@@ -13,7 +13,7 @@ int find(char **args)
 	char *s;
 
 	char **instruction = NULL;
-	
+
 	s = _strdup(search_path("PATH"));
 	if (s == NULL)
 	{
@@ -88,7 +88,7 @@ int find_dirs(char **instruction, char **args)
 	working_d = getcwd(NULL, 0);
 	for (count = 0; instruction[count] != NULL; count++)
 	{
-		if (args[0][0] = '/')
+		if (args[0][0] == '/')
 		{
 			break;
 		}
