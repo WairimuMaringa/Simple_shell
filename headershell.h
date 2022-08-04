@@ -49,6 +49,7 @@ char *_strconcat(char *string1, char *string2);
 void sig_transmission(int signal_no);
 int exit_shell(char **args, char *string);
 int print_environmt(void);
+int main(__attribute__((unused)) int argc, char *argv[]);
 
 
 
