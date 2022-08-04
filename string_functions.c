@@ -43,7 +43,6 @@ char _strcmp(char *string1, char *string2)
 	int x;
 
 	x = 0;
-	count = 0;
 	if (string1 == NULL || string2 == NULL)
 	{
 		return (-1);
@@ -57,7 +56,6 @@ char _strcmp(char *string1, char *string2)
 		}
 		x++;
 	}
-	printf("%d\n", count);
 	return (count);
 }
 /**

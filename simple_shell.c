@@ -16,7 +16,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 	size_t x;
 
 	signal(SIGINT, sig_transmission);
-	for (infinite_loop = 1; infinite_loop <= 1; infinite_loop++)
+	for (infinite_loop = 1; 1; infinite_loop++)
 	{
 		read_line = NULL;
 		x = 0;

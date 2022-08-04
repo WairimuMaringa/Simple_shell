@@ -27,6 +27,7 @@ void remove_equal_sign(char **string)
 int countchars(char *string)
 {
 	int x, y, num, flag;
+
 	char *delim = " :";
 
 	x = 0;
@@ -69,6 +70,7 @@ char **tokenize(char *string, int num)
 	char *token;
 
 	char **token_char = malloc(sizeof(char *) * num);
+
 	char *delim = " :'\n''\t'";
 
 	x = 0;

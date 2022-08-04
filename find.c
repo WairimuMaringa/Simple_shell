@@ -83,7 +83,7 @@ int find_dirs(char **instruction, char **args)
 
 	int count;
 
-	struct stat st;
+	struct stat sb;
 
 	working_d = getcwd(NULL, 0);
 	for (count = 0; instruction[count] != NULL; count++)
@@ -97,7 +97,7 @@ int find_dirs(char **instruction, char **args)
 			break;
 		}
 		chdir(instruction[count]);
-		if (stat(args[0], &st) == 0)
+		if (stat(args[0], &sb) == 0)
 		{
 			args[0] = _strconcat(instruction[count], args[0]);
 			if (args[0] == NULL)
